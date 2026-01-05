@@ -84,7 +84,7 @@ a {
 
 
 .box1 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(27, 25, 62, 0), rgba(27, 25, 62, 0)), url(/images/image_example.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(27, 25, 62, 0), rgba(27, 25, 62, 0)), url(./img/image_example.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -121,4 +121,246 @@ a {
   background-color: rgb(216, 216, 216);
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.countdown-section {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: ghostwhite;
+}
+
+.countdown-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.box span {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.box small {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #64748b;
+}
+
+/* Responsive for the countdown */
+@media (max-width: 768px) {
+  .countdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 300px) {
+  .countdown {
+    grid-template-columns: 1fr;
+  }
+}
+
+.schedule-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.schedule-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 0.5rem;
+}
+
+.schedule-subtitle {
+  color: #64748b;
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: left;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.details p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .time {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.background-section {
+  background-color: ghostwhite;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 0.5rem;
+}
+
+.faq-subtitle {
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question .arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 0 1.5rem 1.2rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.contact-faq {
+  max-height: 200px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  margin: 3rem;
+  padding: 3rem;
+  background-color: white;
+}
+
+footer {
+  background-color: ghostwhite;
+  max-height: 500px;
+  padding: 4rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.greetings {
+  margin: 3rem;
+  color: #64748b;
+}
+
+.solid2 {
+  width: 1300px;
+  margin: auto;
+  color: #64748b;
 }

@@ -16,6 +16,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,28 +27,32 @@
 
 <body>
     <div class="background-color">
-
-
         <main>
-            <div class="box1">
-                <header>
-                    <div class="header-flex">
-                        <div class="left-hdr">
-                            <div><img src="NEED_IMAGE" alt="logo" class="logo"></div>
+            <div class="box1" id="home">
+                <header id="navbar">
+                    <nav class="nav">
+                        <div class="logo"><img src="./img/Elegant black and white monogram.png" alt=""></div>
+
+                        <!-- HAMBURGER BUTTON -->
+                        <div class="menu-toggle" id="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <div>
-                            <ul>
-                                <a id="menu-btns" href="">Начало</a>
-                                <a id="menu-btns" href="">Брояч</a>
-                                <a id="menu-btns" href="">Програма</a>
-                                <a id="menu-btns" href="">Локация</a>
-                                <a id="menu-btns" href="">Форма</a>
-                                <a id="menu-btns" href="">Локация</a>
-                                <a id="menu-btns" href="">Галерия</a>
-                            </ul>
+
+                        <!-- MENU LINKS -->
+                        <div class="nav-links" id="nav-links">
+                            <a href="#home">Начало</a>
+                            <a href="#schedule">Програма</a>
+                            <a href="#rsvp">Записване</a>
+                            <a href="#faq">Въпроси</a>
+                            <a href="#contact">Контакти</a>
+                            <a href="#location">Локация</a>
                         </div>
-                    </div>
+                    </nav>
+
                 </header>
+
                 <div class="title-wrap">
                     <hr class="solid">
                     <p class="pad">ВИЕ СТЕ ПОКАНЕНИ ДА ОТПРАЗНУВАМЕ</p>
@@ -60,10 +66,10 @@
                             нашето пътуване заедно. Вашето присъствие би означавало всичко за нас в този специален ден.
                         </p>
                     </div>
-                    <button class="button-sign">ЗАПИШЕТЕ СЕ</button>
+                    <button class="button-sign">ЗАПИШЕТЕ СЕ СЕГА!</button>
                 </div>
             </div>
-            <section class="countdown-section">
+            <section class="countdown-section" id="countdown">
                 <h1>Оставащо време</h1>
                 <p class="subtitle">докато кажем "ДА"</p>
 
@@ -95,76 +101,115 @@
 
                     <div class="timeline-item">
                         <div class="time">
-                            <div class="icon">🏛️</div>
-                            <span>14:00</span>
+                            <div class="icon">🚗</div>
+                            <span>14:30</span>
                         </div>
                         <div class="details">
-                            <h3>Пристигане</h3>
+                            <h3>Крадене на булката</h3>
+                            <p>Локация: ж.к. Картала, ул. "Асен Разцветников" 6, 5000 Велико Търново (южен вход)</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">
+                            <div class="icon">💍</div>
+                            <span>17:30</span>
+                        </div>
+                        <div class="details">
+                            <h3>Сключване на граждански брак с изнесен ритуал</h3>
+                            <p>"Ваканционно селище Балканъ", 5096 Калайджии</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">
+                            <div class="icon">📸</div>
+                            <span>18:00</span>
+                        </div>
+                        <div class="details">
+                            <h3>Поздравления и снимки</h3>
                             <p>Уелкъм дринк и посрещане на гостите</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="time">
-                            <div class="icon">🏛️</div>
-                            <span>14:00</span>
+                            <div class="icon">🍽️</div>
+                            <span>19:00</span>
                         </div>
                         <div class="details">
-                            <h3>Пристигане</h3>
+                            <h3>Празнична вечеря</h3>
                             <p>Уелкъм дринк и посрещане на гостите</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="time">
-                            <div class="icon">🏛️</div>
-                            <span>14:00</span>
+                            <div class="icon">🍰</div>
+                            <span>22:30</span>
                         </div>
                         <div class="details">
-                            <h3>Пристигане</h3>
-                            <p>Уелкъм дринк и посрещане на гостите</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time">
-                            <div class="icon">🏛️</div>
-                            <span>14:00</span>
-                        </div>
-                        <div class="details">
-                            <h3>Пристигане</h3>
-                            <p>Уелкъм дринк и посрещане на гостите</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time">
-                            <div class="icon">🏛️</div>
-                            <span>14:00</span>
-                        </div>
-                        <div class="details">
-                            <h3>Пристигане</h3>
-                            <p>Уелкъм дринк и посрещане на гостите</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time">
-                            <div class="icon">🏛️</div>
-                            <span>14:00</span>
-                        </div>
-                        <div class="details">
-                            <h3>Пристигане</h3>
+                            <h3>Разрязване на тортата</h3>
                             <p>Уелкъм дринк и посрещане на гостите</p>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section class="rsvp" id="rsvp">
+                <h2>RSVP</h2>
+                <p style="color: rgb(30, 30, 30);">Моля, уведомете ни дали ще присъствате</p>
+
+                <form id="rsvp-form">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label>Име и фамилия *</label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <!-- Attendance -->
+                    <div class="form-group">
+                        <label>Ще присъствате ли? *</label>
+                        <select name="attendance" id="attendance" required>
+                            <option value="">Изберете</option>
+                            <option value="yes">Да</option>
+                            <option value="no">Не</option>
+                        </select>
+                    </div>
+
+                    <!-- Conditional fields -->
+                    <div id="additional-fields" class="hidden">
+
+                        <div class="form-group">
+                            <label>Брой гости</label>
+                            <input type="number" name="guest_count" min="1" placeholder="Напр. 2">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Имена на гостите</label>
+                            <textarea name="guest_names" rows="3" placeholder="Име и фамилия на всеки гост"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Вегетарианци / вегани?</label>
+                            <textarea name="diet" rows="2" placeholder="Напр. 1 вегетарианец"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Алергии и хранителни предпочитания</label>
+                            <textarea name="allergies" rows="2" placeholder="Без свинско, без лук и т.н."></textarea>
+                        </div>
+
+                    </div>
+
+                    <button class="submit" type="submit">Изпрати</button>
+                </form>
+            </section>
+
             <div class="background-section">
                 <section class="faq-section" id="faq">
-                    <h2>Frequently Asked Questions</h2>
-                    <p class="faq-subtitle">Everything you need to know</p>
+                    <h2>Често задавани въпроси</h2>
+                    <p class="faq-subtitle">Всичко, което трябва да знаете</p>
 
                     <div class="faq-list">
 
@@ -177,103 +222,115 @@
                                 <p>Formal or semi-formal attire. Think elegant and comfortable.</p>
                             </div>
                         </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                What time should I arrive?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Please arrive at least 30 minutes before the ceremony starts.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                Can I bring a plus-one?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Plus-ones are welcome if they are included in your invitation.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                Are children welcome?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>We kindly ask that this be an adults-only celebration.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                Will the ceremony be indoors or outdoors?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>The ceremony will take place outdoors, weather permitting.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                Is there parking available?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Yes, free parking will be available at the venue.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                What about gifts?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Your presence is the greatest gift, but a small contribution is appreciated.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                Will there be vegetarian or special meal options?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Yes! Please indicate dietary preferences in the RSVP form.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                Can I take photos during the ceremony?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>We kindly ask that phones remain away during the ceremony.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                How can I contact you with more questions?
-                                <span class="arrow">⌄</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>You can reach us via the contact section on this website.</p>
-                            </div>
-                        </div>
                     </div>
-                    <div class="contact-faq">
+                </section>
+
+                <section class="contacting-section">
+                    <div class="contact-faq" id="contact">
                         <h1>Все още имате въпроси?</h1>
-                        <p>Свържете се с нас!</p>
-                        <div>
-                            <a href="">tedito236@gmail.com</a>
-                            <a href="">+359 88 323 3232</a>
+                        <p class="contact-sub">Свържете се с нас!</p>
+
+                        <div class="contact-row">
+                            <div class="contact-row">
+                                <div>
+                                    <h2 style="margin: 10px 0px 10px 0px;">Свържете се с Боби:</h2>
+                                    <div class="contact-item">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <a href="tel:+359896716446">+359 89 671 6446</a>
+                                    </div>
+
+                                    <div class="divider" aria-hidden="true"></div>
+
+                                    <div class="contact-item">
+                                        <i class="fa-brands fa-instagram"></i>
+                                        <a href="https://instagram.com/bobiixd" target="_blank"
+                                            rel="noopener">@bobiixd</a>
+                                    </div>
+
+                                    <div class="divider" aria-hidden="true"></div>
+
+                                    <div class="contact-item">
+                                        <i class="fa-regular fa-envelope"></i>
+                                        <a href="mailto:danibobilove@gmail.com">danibobilove@gmail.com</a>
+                                    </div>
+                                    <div>
+                                        <h2 style="margin: 30px 0px 10px 0px;">Свържете се с Дани:</h2>
+                                        <div class="contact-item">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <a href="tel:+359887261978">+359 88 726 1978</a>
+                                        </div>
+
+                                        <div class="divider" aria-hidden="true"></div>
+
+                                        <div class="contact-item">
+                                            <i class="fa-brands fa-instagram"></i>
+                                            <a href="https://instagram.com/dani25to" target="_blank"
+                                                rel="noopener">@dani25to</a>
+                                        </div>
+
+                                        <div class="divider" aria-hidden="true"></div>
+
+                                        <div class="contact-item">
+                                            <i class="fa-regular fa-envelope"></i>
+                                            <a href="mailto:danibobilove@gmail.com">danibobilove@gmail.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+
+                <section class="location" id="location">
+                    <div class="location-header">
+                        <h1>Локация на събитието</h1>
+                    </div>
+
+                    <div class="location-content">
+                        <div class="location-info">
+                            <h1>The Garden Estate</h1>
+
+                            <div class="info-item">
+                                <span>📍</span>
+                                <p>1234 Meadow Lane, Riverside Gardens, CA 90210</p>
+                            </div>
+
+                            <div class="info-item">
+                                <span>📞</span>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+
+                            <div class="card">
+                                <h4>Parking Information</h4>
+                                <p>
+                                    Complimentary valet parking is available for all guests.
+                                    Additional parking spaces are located in the north lot,
+                                    accessible via Garden Drive.
+                                </p>
+                            </div>
+
+                            <div class="card">
+                                <h4>Guest Accommodation</h4>
+                                <p>
+                                    We have reserved a block of rooms at nearby hotels for our
+                                    out-of-town guests. Special rates are available when you
+                                    mention our wedding.
+                                </p>
+
+                                <p class="hotel">
+                                    <strong>The Riverside Inn</strong><br>
+                                    2 miles away • Code: EMMAJAMES2025
+                                </p>
+
+                                <p class="hotel">
+                                    <strong>Garden View Hotel</strong><br>
+                                    3 miles away • Code: WEDDING2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="location-map">
+                            <iframe src="https://www.google.com/maps?q=Beverly%20Hills%20CA&output=embed"
+                                allowfullscreen="" loading="lazy">
+                            </iframe>
                         </div>
                     </div>
                 </section>
@@ -281,12 +338,52 @@
         </main>
         <footer>
             <hr class="solid2">
-            <div class="greetings">
-                <p>Нямаме търпение да се срещнем!</p>
-                <p>© 2026 Йорданка и Борислав • мазна батьо</p>
+            <div class="footer-content">
+                <div class="greetings">
+                    <p>Нямаме търпение да се срещнем!</p>
+                    <p>© 2026 Йорданка и Борислав • мазна батьо</p>
+                </div>
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("7pYBBCXR97ItBGEwx");
+
+        const form = document.getElementById("rsvp-form");
+        const attendanceSelect = document.getElementById("attendance");
+        const additionalFields = document.getElementById("additional-fields");
+
+        attendanceSelect.addEventListener("change", () => {
+            additionalFields.classList.toggle(
+                "hidden",
+                attendanceSelect.value !== "yes"
+            );
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            emailjs.sendForm(
+                "service_14dr8mu",
+                "template_rh9h7d5",
+                form
+            ).then(() => {
+                alert("Благодарим! Отговорът е изпратен ❤️");
+                form.reset();
+                additionalFields.classList.add("hidden");
+            }).catch((error) => {
+                alert("Грешка при изпращането 😢");
+                console.error(error);
+            });
+        });
+    </script>
 </body>
 
 <script>
@@ -334,6 +431,48 @@
             item.classList.toggle("active");
         });
     });
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    document.getElementById("rsvp-form")
+        .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            if (!this.checkValidity()) {
+                this.reportValidity();
+                return;
+            }
+
+            alert("Благодарим за отговора! ❤️");
+            this.reset();
+            additionalFields.classList.add("hidden");
+        });
+
+    const toggleBtn = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    // open / close menu
+    toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        navbar.classList.toggle("menu-open");
+    });
+
+    // close menu when link is clicked
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            navbar.classList.remove("menu-open");
+        });
+    });
+
 </script>
 
 </html>

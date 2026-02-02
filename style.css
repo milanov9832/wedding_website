@@ -221,7 +221,6 @@ a {
 
 .countdown-section h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 5vw, 3rem);
   margin-bottom: 0.5rem;
 }
 
@@ -870,10 +869,6 @@ section {
   
   .box1-title {
     font-size: 32px !important;
-  }
-  
-  .countdown-section h1 {
-    font-size: 1.2rem !important;
   }
   
   .subtitle {

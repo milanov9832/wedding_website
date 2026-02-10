@@ -137,8 +137,7 @@ i {
 a {
   text-decoration: none;
   color: rgb(27, 27, 27);
-  font-weight: 600;
-  margin: 0px 20px 0px 0px;
+  font-weight: 500;
   font-size: 20px;
 }
 
@@ -160,6 +159,7 @@ a {
 .pad {
   padding: 10px;
   color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 .info-text {
@@ -170,7 +170,8 @@ a {
 
 
 .box1 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(137, 137, 137, 0.2), rgba(27, 25, 62, 0)), url(./img/maybe_main2.JPEG);
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0.32) 100%, rgba(0,0,0,0.58) 0%), url(./img/maybe_main2.JPEG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -195,12 +196,66 @@ a {
   font-size: 17px;
 }
 
+/* Elegant, compact hero countdown */
+.box1 .hero-countdown {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+  padding: 8px 12px;
+  border-radius: 999px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.45);
+}
+
+.box1 .hero-countdown .countdown {
+  display: flex;
+  gap: 10px;
+}
+
+.box1 .hero-countdown .box {
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.box1 .hero-countdown .box span {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.55);
+}
+
+.box1 .hero-countdown .box small {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.85);
+}
+
+@media (max-width: 768px) {
+  .box1 .hero-countdown { bottom: 20px; padding: 6px 10px; gap: 8px; }
+  .box1 .hero-countdown .box span { font-size: 1rem; }
+  .box1 .hero-countdown .box { min-width: 50px; padding: 4px 8px; }
+}
+
 .button-sign {
-  padding: 15px 20px 15px 20px;
+  padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
   border-radius: 20px;
   border: none;
   margin: 50px 0px 20px 0px;
   font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 16px);
+  white-space: nowrap;
+  background-color: white;
 }
 
 .button-sign:hover {
@@ -312,11 +367,17 @@ a {
   font-weight: 500;
 }
 
+.time span {
+  font-weight: 700;
+  margin-left: 0.9rem;
+  background: rgb(197, 197, 197);
+  padding: 6px;
+  border-radius: 12px;
+}
+
 .icon {
-  width: 48px;
-  height: 48px;
-  background: #f1f5f9;
-  border-radius: 50%;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,6 +387,10 @@ a {
 .details h3 {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
+}
+
+.h3-notext {
+  margin-top: 0.9rem;
 }
 
 .details p {
@@ -348,6 +413,7 @@ a {
 .location {
   padding: 100px 8%;
   background: #fff;
+  background-color: #fafafa;
 }
 
 .location-header {
@@ -369,68 +435,79 @@ a {
 /* Layout */
 .location-content {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-/* Left */
-.location-info h3 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.info-item {
+/* Location Cards */
+.location-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  color: #444;
+  flex-direction: column;
 }
 
-.card {
-  background: #f9f9f9;
-  border-radius: 14px;
-  padding: 24px;
-  margin-top: 24px;
+.location-card:hover {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
 }
 
-.card h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.location-card h2 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 28px 28px 20px;
+  margin: 0;
+  color: #1a1a1a;
+  border-bottom: 2px solid #f0f0f0;
 }
 
-.card p {
-  color: #555;
-  line-height: 1.6;
+.card-map {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
 }
 
-.hotel {
-  margin-top: 14px;
-  font-size: 15px;
-}
-
-/* Map */
-.location-map iframe {
+.card-map iframe {
   width: 100%;
   height: 100%;
-  min-height: 520px;
   border: none;
-  border-radius: 18px;
+  display: block;
+}
+
+.card-text {
+  padding: 24px 28px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-text p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* 📱 Responsive */
 @media (max-width: 992px) {
   .location-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .location-map iframe {
-    min-height: 400px;
+  .location-card h2 {
+    font-size: 22px;
   }
 
-  .location-header h2 {
-    font-size: 36px;
+  .card-map {
+    height: 280px;
   }
 }
 
@@ -439,8 +516,29 @@ a {
     padding: 70px 6%;
   }
 
-  .location-info h3 {
-    font-size: 26px;
+  .location-content {
+    gap: 1.5rem;
+  }
+
+  .location-card {
+    border-radius: 10px;
+  }
+
+  .location-card h2 {
+    font-size: 20px;
+    padding: 20px 20px 16px;
+  }
+
+  .card-map {
+    height: 220px;
+  }
+
+  .card-text {
+    padding: 18px 20px;
+  }
+
+  .card-text p {
+    font-size: 14px;
   }
 
   .card {
@@ -465,6 +563,12 @@ a {
 .rsvp p {
   color: #666;
   margin-bottom: 40px;
+}
+
+.contact-hyper {
+  color: #1e395d;
+  text-decoration: underline;
+  font-size: 18px;
 }
 
 form {
@@ -614,7 +718,7 @@ textarea:focus {
 }
 
 .contacting-section {
-  background-color: #fafafa;
+  background-color: white;
   padding: 60px 0;
 }
 
@@ -657,6 +761,15 @@ textarea:focus {
   justify-content: center;
   gap: 1.75rem;
   margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contact-person {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-item {
@@ -665,6 +778,7 @@ textarea:focus {
   gap: 0.75rem;
   color: #0f172a;
   font-weight: 500;
+  margin: 0.4rem;
 }
 
 .contact-item i {
@@ -684,9 +798,7 @@ textarea:focus {
 }
 
 .divider {
-  width: 1px;
-  height: 35px;
-  background: #e6e6e6;
+  display: none;
 }
 
 @media (max-width: 640px) {
@@ -762,6 +874,10 @@ section {
 
   h2 {
     font-size: 22px !important;
+  }
+
+  .contact-hyper {
+    font-size: 14px !important;
   }
 
   nav,
@@ -915,9 +1031,9 @@ section {
   }
   
   .icon {
-    width: 36px !important;
-    height: 36px !important;
-    font-size: 1rem !important;
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 1.1rem !important;
   }
   
   .details h3 {
@@ -926,6 +1042,21 @@ section {
   
   .details p {
     font-size: 0.6rem !important;
+  }
+}
+
+/* Very small phones (under 480px width) */
+@media (max-width: 480px) {
+  .time span {
+    padding: 3px 4px !important;
+    font-size: 0.65rem !important;
+    margin-left: 0.4rem !important;
+  }
+  
+  .icon {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1rem !important;
   }
 }
 

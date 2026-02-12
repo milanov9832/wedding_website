@@ -150,6 +150,12 @@ a {
   align-items: center;
 }
 
+@media (min-width: 1025px) {
+  .title-wrap {
+    padding: 180px 0px 150px 0px;
+  }
+}
+
 /* Decorative date banner between title and CTA */
 .date-banner {
   display: flex;
@@ -164,13 +170,19 @@ a {
 }
 
 .date-side {
-  flex: 0 1 0;
+  flex: 1 1 0;
   border-top: 2px solid rgba(255,255,255,0.85);
   border-bottom: 2px solid rgba(255,255,255,0.85);
   padding: 0.1rem clamp(0.8rem, 3vw, 2rem);
   text-align: center;
-  font-size: clamp(0.9rem, 2vh, 1.4rem);
+  font-size: clamp(1.8rem, 4vh, 2.5rem);
   letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .date-side {
+    font-size: clamp(1.1rem, 2.8vh, 1.8rem);
+  }
 }
 
 .date-center {
@@ -300,6 +312,8 @@ a {
   font-size: clamp(14px, 2.5vw, 16px);
   white-space: nowrap;
   background-color: white;
+  text-decoration: none;
+  color: #1a1a1a;
 }
 
 .button-sign:hover {

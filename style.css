@@ -143,23 +143,65 @@ a {
 
 .title-wrap {
   margin: auto;
-  width: 50%;
-  padding: 150px 0px 150px 0px;
+  width: clamp(55%, 85vw, 50%);
+  padding: clamp(80px, 15vh, 150px) 0px clamp(80px, 15vh, 150px) 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Decorative date banner between title and CTA */
+.date-banner {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.8rem, 2vw, 1.25rem);
+  width: 100%;
+  max-width: 720px;
+  justify-content: center;
+  color: #fff;
+  margin: clamp(0.3rem, 1vh, 0.6rem) 0 clamp(0.3rem, 1vh, 0.6rem) 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.date-side {
+  flex: 0 1 0;
+  border-top: 2px solid rgba(255,255,255,0.85);
+  border-bottom: 2px solid rgba(255,255,255,0.85);
+  padding: 0.1rem clamp(0.8rem, 3vw, 2rem);
+  text-align: center;
+  font-size: clamp(0.9rem, 2vh, 1.4rem);
+  letter-spacing: 0.02em;
+}
+
+.date-center {
+  width: clamp(80px, 20vw, 160px);
+  text-align: center;
+}
+
+.date-day {
+  font-size: clamp(42px, 10vh, 120px);
+  line-height: 0.9;
+  font-weight: 700;
+}
+
+.date-year {
+  font-size: clamp(16px, 3vh, 22px);
+  margin-top: 0.15rem;
+}
+
+
+
 .solid {
   border: 1px solid white;
-  width: 100px;
-  margin: 10px 0px 10px 0px;
+  width: clamp(60px, 10vw, 100px);
+  margin: clamp(6px, 1vh, 10px) 0px clamp(6px, 1vh, 10px) 0px;
 }
 
 .pad {
-  padding: 10px;
+  padding: clamp(6px, 2vh, 10px);
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  text-align: center;
 }
 
 .info-text {
@@ -179,13 +221,14 @@ a {
 }
 
 .box1-title {
-  font-size: 86px;
+  font-size: clamp(40px, 10vh, 86px);
   color: white;
   text-align: center;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
 }
 
 .info {
@@ -193,7 +236,8 @@ a {
   font-weight: 500;
   text-align: center;
   text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
-  font-size: 17px;
+  font-size: clamp(14px, 2.5vh, 17px);
+  line-height: 1.4;
 }
 
 /* Elegant, compact hero countdown */
@@ -251,7 +295,7 @@ a {
   padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
   border-radius: 20px;
   border: none;
-  margin: 50px 0px 20px 0px;
+  margin: 18px 0px 12px 0px;
   font-weight: 600;
   font-size: clamp(14px, 2.5vw, 16px);
   white-space: nowrap;
@@ -502,8 +546,8 @@ a {
     gap: 2rem;
   }
 
-  .location-card h2 {
-    font-size: 22px;
+  .location-card a {
+    font-size: 16px;
   }
 
   .card-map {
@@ -524,9 +568,8 @@ a {
     border-radius: 10px;
   }
 
-  .location-card h2 {
-    font-size: 20px;
-    padding: 20px 20px 16px;
+  .location-card a {
+    font-size: 16px;
   }
 
   .card-map {
@@ -643,6 +686,40 @@ textarea:focus {
 
 .background-section {
   background-color: white;
+}
+
+/* Ensure consistent font and dark text across site content (exclude hero `.box1`) */
+main, section, .background-section, .contact-faq, .location-content, .rsvp, .faq-section, .timeline, .contacting-section, form, .form-group, label, input, select, textarea {
+  font-family: 'Lora', serif;
+  color: #0f172a; /* dark slate */
+}
+
+/* FAQ specifics */
+.faq-question {
+  color: #0f172a;
+  font-family: 'Lora', serif;
+}
+
+.faq-answer, .faq-answer p {
+  color: #475569; /* slightly lighter for answers */
+  font-family: 'Lora', serif;
+}
+
+/* RSVP form specifics */
+.rsvp p, .form-group label, .submit, input, select, textarea {
+  color: #0f172a;
+  font-family: 'Lora', serif;
+}
+
+/* Make sure links inside content aren't blue on mobile */
+section a, .faq-answer a, .contact-item a, .card-text a {
+  color: #0f172a;
+  text-decoration: none;
+}
+
+/* Preserve decorative hero fonts for .box1 only */
+.box1, .box1 * {
+  /* keep existing hero styles; do not override here */
 }
 
 .faq-section {
@@ -974,11 +1051,15 @@ section {
   }
 
   h2 {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 
   p {
     font-size: 12px !important;
+  }
+
+  .title-wrap {
+    padding: clamp(40px, 8vh, 80px) 0px clamp(30px, 6vh, 60px) 0px;
   }
   
   .box1-title {
@@ -1119,6 +1200,35 @@ section {
   padding: 25px 0;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   z-index: 999;
+}
+
+/* Center hero content on small screens */
+@media (max-width: 480px) {
+  .box1 {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+  }
+
+  .title-wrap {
+    width: 95%;
+    padding: 12px 0 8px;
+    box-sizing: border-box;
+    transform: translateY(-6px);
+  }
+
+  .box1-title {
+    font-size: 36px !important;
+  }
+
+  .pad, .solid { text-align: center; }
+
+  .hero-countdown { bottom: 18px !important; }
 }
 
 .menu-toggle {

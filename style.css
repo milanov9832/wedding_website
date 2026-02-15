@@ -23,6 +23,13 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.faq-answer a {
+  font-size: 15px;
+  font-style: italic;
+  text-decoration: underline;
+  color: #1e395d;
+}
+
 #navbar.scrolled .nav-links a {
   color: black;
 }
@@ -726,7 +733,7 @@ main, section, .background-section, .contact-faq, .location-content, .rsvp, .faq
 }
 
 /* Make sure links inside content aren't blue on mobile */
-section a, .faq-answer a, .contact-item a, .card-text a {
+section a, .contact-item a, .card-text a {
   color: #0f172a;
   text-decoration: none;
 }
@@ -955,6 +962,13 @@ section {
   h2 {
     font-size: 28px !important;
   }
+
+  .faq-answer a {
+  font-size: 13px;
+  font-style: italic;
+  text-decoration: underline;
+  color: #1e395d;
+}
 }
 
 /* Mobile */
@@ -970,6 +984,13 @@ section {
   .contact-hyper {
     font-size: 14px !important;
   }
+
+  .faq-answer a {
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: underline;
+  color: #1e395d;
+}
 
   nav,
   .nav {

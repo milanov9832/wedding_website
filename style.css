@@ -738,11 +738,6 @@ section a, .contact-item a, .card-text a {
   text-decoration: none;
 }
 
-/* Preserve decorative hero fonts for .box1 only */
-.box1, .box1 * {
-  /* keep existing hero styles; do not override here */
-}
-
 .faq-section {
   max-width: 800px;
   margin: 0 auto;
